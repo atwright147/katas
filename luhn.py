@@ -5,7 +5,7 @@ print(numbers)
 
 def validateLuhn(number):
 	final = 0
-	for i, character in enumerate(reversed(str(number))):
+	for i, character in enumerate(reversed(str(number)), 1):
 		digit = int(character)
 		if i % 2 == 0:  # only do to every other character
 			multiplied = digit * 2
