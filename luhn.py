@@ -14,7 +14,8 @@ def validateLuhn(number):
 			else:
 				digit = multiplied
 		final += digit
-	print(final % 10 == 0)
+	return final % 10 == 0
 
+print("Tests:")
 for number in numbers:
-	validateLuhn(number)
+	print(validateLuhn(number))
