@@ -3,7 +3,10 @@
 'use strict';
 
 function getAge(dob) {
-	const dobSplit = dob.split('/');
+	if (!dob.match(/\d{2}(\/|\.|\-)\d{2}(\/|\.|\-)\d{2,4}/i)) {
+		return false;
+	}
+	const dobSplit = dob.split(/\/|\-|\./i);
 	const dobDay   = Number(dobSplit[0]);
 	const dobMonth = Number(dobSplit[1]);
 	const dobYear  = Number(dobSplit[2]);
